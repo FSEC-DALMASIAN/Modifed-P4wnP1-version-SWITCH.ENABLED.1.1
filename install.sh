@@ -149,10 +149,10 @@ sudo cp conf/default_index.html /var/www/index.html
 sudo chmod a+r /var/www/index.html
 
 
-# create 128 MB image for USB storage
-echo "Creating 128 MB image for USB Mass Storage emulation"
+# create 16000 MB image for USB storage
+echo "Creating 16000 MB image for USB Mass Storage emulation"
 mkdir -p $wdir/USB_STORAGE
-dd if=/dev/zero of=$wdir/USB_STORAGE/image.bin bs=1M count=128
+dd if=/dev/zero of=$wdir/USB_STORAGE/image.bin bs=1M count=16000
 mkdosfs $wdir/USB_STORAGE/image.bin
 
 # create folder to store loot found
